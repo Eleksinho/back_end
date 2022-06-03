@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import menu,contactos
+from .views import componentes, menu,contactos
 
 urlpatterns = [
-    path('',menu,name='menu'),
+    path('menu',menu,name='menu'),
     path('contactos/',contactos,name='contactos'),
+    path('',componentes,name='componente'),
 ]
