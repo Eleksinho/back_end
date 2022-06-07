@@ -17,3 +17,9 @@ def componentes (request):
 def nosotros (request):
     return render (request, 'lek/nosotros.html')
 
+def registro (request):
+    return render (request, 'lek/registro.html')
+
+def login (request):
+    return render (request, 'lek/login.html')
+
