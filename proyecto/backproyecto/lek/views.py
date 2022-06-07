@@ -14,3 +14,6 @@ def componentes (request):
                   "fotocomponente4" : "/static/lek/img/componentes/audifono4.png", "fotocomponente5" : "/static/lek/img/componentes/audifono5.png"}
     return render (request, 'lek/componentes.html',contexto )
 
+def nosotros (request):
+    return render (request, 'lek/nosotros.html')
+
