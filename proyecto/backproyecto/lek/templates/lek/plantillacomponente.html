@@ -14,8 +14,8 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">       
             <div class="container-fluid">
-                <a class="navbar-brand" href="menu.html">
-                    <img src="/Proyecto/imagenes/logos/logoo.jpg" alt="" width="30" height="30"  class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="{% url 'menu'%}">
+                    <img src="{% static 'lek/img/logoo.jpg' %}" alt="" width="30" height="30"  class="d-inline-block align-text-top">
                   </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Menu.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'menu'%}">Inicio</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -33,7 +33,7 @@
                               Componentes
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/Proyecto/proyecto/vista_admin/audifonos_admin.html">Audífonos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'componentes' %}">Audífonos</a></li>
                                 <li><a class="dropdown-item" href="Monitores.html">Monitores</a></li>
                                 <li><a class="dropdown-item" href="Ratones.html">Ratones</a></li>
                             </ul>
@@ -139,7 +139,7 @@
         <div class="col-md-4 col-sm-12">
             <div class="card" style="width: 100%;">
                 <a href="##">
-                    <img src="{% static 'lek/img/proximamente.jpg' %}" class="card-img-top" alt="coming soon ">
+                    <img src="{% static 'lek/img/componentes/proximamente.png' %}" class="card-img-top" alt="coming soon ">
                 </a>
                 <div class="card-body">
                   <p class="card-text"> <center>Nuevo producto proximamente</center> </p>
