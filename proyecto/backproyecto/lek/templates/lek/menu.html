@@ -50,34 +50,17 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{% url 'nosotros' %}">Nosotros</a>
                     </ul>
+
                     <div class="d-flex">
-
-                        <li>
-                            <a href="{% url 'registro' %}">Registrarse</a>
-                        </li>
-                        {% if user.is_authenticated %} 
-                        <li>
-                            <a href="{% url 'logout'%}">cerrar sesión</a>
-                        </li>
-                        <li>
-                            <a href="#">@{{ user.username}}</a>
-                        </li>
-                        {%else%}
-                        <li>
-                            <a href="{% url 'login' %}">iniciar sesion</a>
-                        </li>
-                        {% endif %}
-
-                        
                         <ul class="navbar-nav me-auto">
-                            
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{% url 'login'%}">Inicio de sesión</a>
-                        </li> -->
-                        
-                        
-                        </ul>
-                    </div>                
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{% url 'registro' %}">Registrarse</a>
+                        </li>                       
+                      </ul>
+                    </div>
                 </div>
 
             </div>
