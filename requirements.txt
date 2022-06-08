@@ -1,3 +1,0 @@
-django == 4.0.5
-Pillow
-django-crispy-forms 
