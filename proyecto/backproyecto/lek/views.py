@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import CustomUserCreationForm
+#from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login 
 # Create your views here.
 
@@ -27,18 +27,18 @@ def login (request):
 def carrito (request):
     return render (request, 'lek/carrito.html')
 
-def registro(request):
-    data = { 
-        'form': CustomUserCreation()
-    }
+# def registro(request):
+#     data = { 
+#         'form': CustomUserCreation()
+#     }
 
-    if request.method == 'POST':
-        formulario = CustomUserCreation(data=request.POST)
-        if formulario.is_valid():
-            formulario.save()
-            user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
-            login(request, user)
-            messages.success(request, "Registracion Exitosa, Bienvenido")
-            return redirect(to="home")
-        data["form"] = formulario 
-    return render(request, 'registration/registro.html', data)
+#     if request.method == 'POST':
+#         formulario = CustomUserCreation(data=request.POST)
+#         if formulario.is_valid():
+#             formulario.save()
+#             user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
+#             login(request, user)
+#             messages.success(request, "Registracion Exitosa, Bienvenido")
+#             return redirect(to="home")
+#         data["form"] = formulario 
+#     return render(request, 'registration/registro.html', data) 
